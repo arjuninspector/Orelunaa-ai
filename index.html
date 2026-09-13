@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050711">
+
+  <title>ORELUNAA AI — Your AI Workforce</title>
+
+  <meta
+    name="description"
+    content="ORELUNAA AI gives you a complete AI workspace with specialized agents, intelligent workflows, projects, files, tasks, multimodal capabilities, analytics, and powerful automation."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+    defer>
+  </script>
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="noise"></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-core">◈</div>
+    <div class="loader-text">ORELUNAA</div>
+    <div class="loader-sub">AI WORKFORCE INITIALIZING</div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <div class="brand-icon">◈</div>
+
+      <div>
+        <div class="brand-name">ORELUNAA</div>
+        <div class="brand-sub">AI WORKFORCE</div>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#agents">Agents</a>
+      <a href="#features">Features</a>
+      <a href="#workspace">Workspace</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+
+    <button class="login-btn" onclick="openLogin()">
+      Login
+    </button>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div id="three-container"></div>
+
+    <div class="floating-card card-one">
+      <div class="mini-icon">⌁</div>
+      <div>
+        <strong>Research Agent</strong>
+        <small>Analyzing information</small>
+      </div>
+      <span class="status-dot"></span>
+    </div>
+
+    <div class="floating-card card-two">
+      <div class="mini-icon">{ }</div>
+      <div>
+        <strong>Coding Agent</strong>
+        <small>Building solution</small>
+      </div>
+      <span class="status-dot"></span>
+    </div>
+
+    <div class="floating-card card-three">
+      <div class="mini-icon">✦</div>
+      <div>
+        <strong>Creator Agent</strong>
+        <small>Generating ideas</small>
+      </div>
+      <span class="status-dot"></span>
+    </div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        <span class="pulse"></span>
+        THE AI WORKFORCE
+      </div>
+
+      <h1>
+        One Workspace.
+        <span>Limitless Possibilities.</span>
+      </h1>
+
+      <p>
+        ORELUNAA AI gives you a complete AI workspace with specialized
+        agents, intelligent workflows, projects, files, tasks,
+        multimodal capabilities, analytics, and powerful automation.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="primary-btn" onclick="openWorkspace()">
+          Enter Workspace →
+        </button>
+
+        <button class="secondary-btn" onclick="scrollToAgents()">
+          Explore AI Agents
+        </button>
+
+      </div>
+
+      <div class="hero-stats">
+
+        <div>
+          <strong>13</strong>
+          <span>AI AGENTS</span>
+        </div>
+
+        <div>
+          <strong>43+</strong>
+          <span>FEATURES</span>
+        </div>
+
+        <div>
+          <strong>∞</strong>
+          <span>WORKFLOWS</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- AGENTS -->
+  <section class="section" id="agents">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        SPECIALIZED INTELLIGENCE
+      </div>
+
+      <h2>Meet Your AI Workforce.</h2>
+
+      <p>
+        Thirteen specialized agents working independently
+        or together to transform complex goals into useful results.
+      </p>
+
+    </div>
+
+    <div class="agents-grid" id="agents-grid"></div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="section dark-section" id="features">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        ORELUNAA ECOSYSTEM
+      </div>
+
+      <h2>Built For Serious Work.</h2>
+
+      <p>
+        A unified AI environment combining intelligence,
+        productivity, automation, collaboration and execution.
+      </p>
+
+    </div>
+
+    <div class="features-grid" id="features-grid"></div>
+
+  </section>
+
+
+  <!-- WORKSPACE -->
+  <section class="workspace-section" id="workspace">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        COMMAND CENTER
+      </div>
+
+      <h2>Your AI Workspace.</h2>
+
+      <p>
+        Manage agents, projects, files, tasks, data and workflows
+        from one intelligent command center.
+      </p>
+
+    </div>
+
+
+    <div class="workspace">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <div class="workspace-logo">
+          <span>◈</span>
+          ORELUNAA
+        </div>
+
+        <button
+          class="side-item active"
+          onclick="showPanel('command',this)">
+          ◈ Command Center
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('chat',this)">
+          ◇ AI Chat
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('projects',this)">
+          □ Projects
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('files',this)">
+          ▫ Files
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('tasks',this)">
+          ✓ Tasks
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('data',this)">
+          ◫ Data
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('teams',this)">
+          ◎ AI Teams
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('analytics',this)">
+          ◌ Analytics
+        </button>
+
+        <button
+          class="side-item"
+          onclick="showPanel('settings',this)">
+          ⚙ Settings
+        </button>
+
+
+        <div class="sidebar-bottom">
+
+          <div class="trial-box">
+
+            <small>PLAN</small>
+
+            <strong>
+              5-Day Free Trial
+            </strong>
+
+            <div class="progress">
+              <span></span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+
+      <!-- WORKSPACE MAIN -->
+      <main class="workspace-main">
+
+
+        <!-- COMMAND CENTER -->
+        <section
+          class="workspace-panel active"
+          id="panel-command">
+
+          <div class="panel-top">
+
+            <div>
+              <div class="panel-label">
+                ORELUNAA CORE
+              </div>
+
+              <h3>
+                Command Center
+              </h3>
+            </div>
+
+            <span class="live-badge">
+              ● SYSTEM ONLINE
+            </span>
+
+          </div>
+
+
+          <div class="command-grid">
+
+            <div class="command-card large">
+
+              <div class="card-label">
+                CORE INTELLIGENCE
+              </div>
+
+              <div class="core-symbol">
+                ◈
+              </div>
+
+              <h3>
+                ORELUNAA Core
+              </h3>
+
+              <p>
+                Coordinate specialized agents,
+                understand context and orchestrate
+                complex workflows.
+              </p>
+
+              <button
+                class="small-btn"
+                onclick="showPanel('chat')">
+                Start Task
+              </button>
+
+            </div>
+
+
+            <div class="command-card">
+
+              <div class="card-label">
+                ACTIVE AGENTS
+              </div>
+
+              <strong class="big-number">
+                13
+              </strong>
+
+              <p>
+                Specialized AI workers
+                available.
+              </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+              <div class="card-label">
+                FEATURES
+              </div>
+
+              <strong class="big-number">
+                43+
+              </strong>
+
+              <p>
+                Intelligence and
+                productivity tools.
+              </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+              <div class="card-label">
+                WORKFLOWS
+              </div>
+
+              <strong class="big-number">
+                ∞
+              </strong>
+
+              <p>
+                Build workflows around
+                your goals.
+              </p>
+
+            </div>
+
+
+            <div class="command-card">
+
+              <div class="card-label">
+                STATUS
+              </div>
+
+              <strong class="big-number">
+                LIVE
+              </strong>
+
+              <p>
+                Workspace initialized.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="activity-box">
+
+            <div class="activity-title">
+              RECENT ACTIVITY
+            </div>
+
+            <div class="activity">
+
+              <div class="activity-icon">
+                ⌁
+              </div>
+
+              <div>
+                <strong>
+                  Research Agent
+                </strong>
+
+                <small>
+                  Research workflow initialized
+                </small>
+              </div>
+
+              <span class="running">
+                READY
+              </span>
+
+            </div>
+
+
+            <div class="activity">
+
+              <div class="activity-icon">
+                { }
+              </div>
+
+              <div>
+                <strong>
+                  Coding Agent
+                </strong>
+
+                <small>
+                  Development environment ready
+                </small>
+              </div>
+
+              <span class="running">
+                READY
+              </span>
+
+            </div>
+
+
+            <div class="activity">
+
+              <div class="activity-icon">
+                ✦
+              </div>
+
+              <div>
+                <strong>
+                  Creator Agent
+                </strong>
+
+                <small>
+                  Creative workspace available
+                </small>
+              </div>
+
+              <span class="running">
+                READY
+              </span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- AI CHAT -->
+        <section
+          class="workspace-panel"
+          id="panel-chat">
+
+          <div class="panel-top">
+
+            <div>
+              <div class="panel-label">
+                INTELLIGENT CONVERSATION
+              </div>
+
+              <h3>
+                AI Chat
+              </h3>
+            </div>
+
+            <span class="live-badge">
+              ORELUNAA CORE
+            </span>
+
+          </div>
+
+
+          <div
+            class="chat-messages"
+            id="chat-messages">
+
+            <div class="message ai">
+
+              <div class="message-avatar">
+                ◈
+              </div>
+
+              <div>
+
+                <strong>
+                  ORELUNAA
+                </strong>
+
+                <p>
+                  Welcome to your AI workforce.
+                  Tell me what you want to research,
+                  create, code, analyze, plan or execute.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="chat-tools">
+
+            <button onclick="enhancePrompt()">
+              ✦ Enhance Prompt
+            </button>
+
+            <button onclick="attachFile()">
+              ▫ Attach File
+            </button>
+
+            <button onclick="useVision()">
+              ◉ Vision
+            </button>
+
+            <button onclick="voiceInput()">
+              ♫ Voice
+            </button>
+
+          </div>
+
+
+          <div class="chat-input-area">
+
+            <textarea
+              id="chat-input"
+              placeholder="Ask ORELUNAA anything...">
+            </textarea>
+
+            <button onclick="sendMessage()">
+              Send →
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section
+          class="workspace-panel"
+          id="panel-projects">
+
+          <div class="panel-top">
+
+            <div>
+              <div class="panel-label">
+                WORK MANAGEMENT
+              </div>
+
+              <h3>
+                Projects
+              </h3>
+            </div>
+
+            <button
+              class="small-btn"
+              onclick="createProject()">
+              + New Project
+            </button>
+
+          </div>
+
+
+          <div
+            class="projects-grid"
+            id="projects-list">
+
+            <div class="project-card">
+
+              <span>◇</span>
+
+              <h4>
+                ORELUNAA Workspace
+              </h4>
+
+              <p>
+                Your central AI workspace.
+              </p>
+
+              <small>
+                ACTIVE
+              </small>
+
+            </div>
+
+
+            <div class="project-card">
+
+              <span>✦</span>
+
+              <h4>
+                Creative Studio
+              </h4>
+
+              <p>
+                Ideas, content and creative workflows.
+              </p>
+
+              <small>
+                READY
+              </small>
+
+            </div>
+
+
+            <div class="project-card">
+
+              <span>{ }</span>
+
+              <h4>
+                Development
+              </h4>
+
+              <p>
+                Code, websites and software projects.
+              </p>
+
+              <small>
+                READY
+              </small>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- FILES -->
+        <section
+          class="workspace-panel"
+          id="panel-files">
+
+          <div class="panel-top">
+
+            <div>
+              <div class="panel-label">
+                KNOWLEDGE
+              </div>
+
+              <h3>
+                Files
+              </h3>
+            </div>
+
+            <label class="small-btn file-upload">
+
+              + Upload
+
+              <input
+                type="file"
+                id="file-input"
+                multiple
+              >
+
+            </label>
+
+          </div>
+
+
+          <div
+            class="file-list"
+            id="file-list">
+
+            <div class="file-item">
+
+              <div>
+                <strong>
+                  Workspace Knowledge Base
+                </strong>
+
+                <small>
+                  Connected knowledge
+                </small>
+              </div>
+
+            </div>
+
+
+            <div class="file-item">
+
+              <div>
+                <strong>
+                  Project Documents
+                </strong>
+
+                <small>
+                  Intelligent document workspace
+                </small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- TASKS -->
+        <section
+          class="workspace-panel"
+          id="panel-tasks">
+
+          <div class="panel-top">
+
+            <div>
+              <div class="panel-label">
+                EXECUTION
+              </div>
+
+              <h3>
+                Tasks
+              </h3>
+            </div>
+
+            <button
+              class="small-btn"
+              onclick="createTask()">
+              + New Task
+            </button>
+
+          </div>
+
+
+          <div
+            class="task-list"
+            id="task-list">
+
+            <div class="task-item">
+
+              <span class="check">
+                ✓
+              </span>
+
+              <div>
+
+                <strong>
+                  Explore ORELUNAA Workspace
+                </strong>
+
+                <small>
+                  Initial setup
+                </small>
+
+              </div>
+
+              <span class="task-status done">
+                DONE
+              </span>
+
+            </div>
+
+
+            <div class="task-item">
+
+              <span class="check"></span>
+
+              <div>
+
+                <strong>
+                  Create first AI workflow
+                </strong>
+
+                <small>
+                  ORELUNAA Workforce
+                </small>
+
+              </div>
+
+              <span class="task-status">
+                READY
+              </span>
+
+            </div>
+
+
+            <div class="task-item">
+
+              <span class="check"></span>
+
+              <div>
+
+                <strong>
+                  Connect project knowledge
+                </strong>
+
+                <small>
+                  Knowledge Base
+                </small>
+
+              </div>
+
+              <span class="task-status">
+                READY
+              </span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- DATA -->
+        <section
+          class="workspace-panel"
+          id="panel-data">
+
+          <div class="panel-top">
+
+            <div>
+              <div class="panel-label">
+                INTELLIGENCE
+              </div>
+
+              <h3>
+                Data Analysis
+              </h3>
+            </div>
+
+            <span class="live-badge">
+              ANALYTICS READY
+            </span>
+
+          </div>
+
+
+          <div class="data-grid">
+
+            <div class="metric">
+
+              <small>
+                DATASETS
+              </small>
+
+              <strong>
+                24
+              </strong>
+
+            </div>
+
+
+            <div class="metric">
+
+              <small>
+                RECORDS
+              </small>
+
+              <strong>
+                18.4K
+              </strong>
+
+            </div>
+
+
+            <div class="metric">
+
+              <small>
+                INSIGHTS
+              </small>
+
+              <strong>
+                137
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="chart-box">
+
+            <div class="chart-title">
+              ANALYSIS OVERVIEW
+            </div>
+
+            <div class="fake-chart">
+
+              <span style="height:35%"></span>
+              <span style="height:55%"></span>
+              <span style="height:42%"></span>
+              <span style="height:72%"></span>
+              <span style="height:60%"></span>
+              <span style="height:84%"></span>
+              <span style="height:75%"></span>
+              <span style="height:95%"></span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- AI TEAMS -->
+        <section
+          class="workspace-panel"
+          id="panel-teams">
+
+          <div class="panel-top">
+
+            <div>
+              <div class="panel-label">
+                MULTI-AGENT SYSTEM
+              </div>
+
+              <h3>
+                AI Teams
+              </h3>
+            </div>
+
+            <button
+              class="small-btn"
+              onclick="createTeam()">
+              + Create Team
+            </button>
+
+          </div>
+
+
+          <div class="team-card">
+
+            <div class="team-orb">
+              ◈
+            </div>
+
+            <div>
+
+              <h4>
+                ORELUNAA Research Team
+              </h4>
+
+              <p>
+                Research + Writing + Data Analysis
+              </p>
+
+            </div>
+
+            <span class="live-badge">
+              READY
+            </span>
+
+          </div>
+
+
+          <br>
+
+
+          <div class="team-card">
+
+            <div class="team-orb">
+              ✦
+            </div>
+
+            <div>
+
+              <h4>
+                Product Creation Team
+              </h4>
+
+              <p>
+                Planning + Coding + Design + Creator
+              </p>
+
+            </div>
+
+            <span class="live-badge">
+              READY
+            </span>
+
+     
